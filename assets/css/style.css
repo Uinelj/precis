@@ -1,125 +1,201 @@
-body.remarkdown {
-  font-family: Inconsolata, Menlo, Monaco, "DejaVu Sans Mono", Consolas, monospace;
-  font-size: 18px;
-  background: #eee;
-  color: #333;
-  min-width: 380px;
+/* Sakura.css v1.0.0
+ * ================
+ * Minimal css theme.
+ * Project: https://github.com/oxalorg/sakura
+ */
+/* Body */
+html {
+  font-size: 62.5%;
+  font-family: "Anonymous Pro", monospace;
 }
 
-.container {
-  max-width: 700px;
-  padding: 10px;
+body {
+  font-size: 1.7rem;
+  line-height: 1.618;
+  max-width: 38em;
   margin: auto;
-  background: #fdfdfd;
-  border: 1px solid #ddd;
+  color: #b0b0b0;
+  background-color: #151515;
+  padding: 13px;
 }
 
-@media(min-width: 300px){
-  .container {
-    padding: 20px 20px;
+@media (max-width: 684px) {
+  body {
+    font-size: 1.445rem;
   }
 }
-
-@media(min-width: 700px){
-  .container {
-    padding: 40px 80px;
+@media (max-width: 382px) {
+  body {
+    font-size: 1.275rem;
   }
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 700;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+h1 {
+  font-size: 2.35em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+small, sub, sup {
+  font-size: 75%;
+}
+
+hr {
+  border-color: #ddb26f;
 }
 
 a {
-  color: #a0f;
   text-decoration: none;
+  color: #ddb26f;
 }
-
-li em + a {
-  display: inline-block;
-  border-bottom: 1px solid transparent;
-}
-
 a:hover {
-  border-bottom: 1px solid;
+  color: #e1a3ee;
+  border-bottom: 2px solid #b0b0b0;
 }
 
-time { color: #aaa;}
-
-article time {
-  display: block;
-  text-align: right;
+ul {
+  padding-left: 1.4em;
 }
 
-input[type="search"] {
-  border: 1px solid #777;
-  font-family: inherit;
-  font-size: smaller;
-  padding: 0.2em;
-  min-width: 150px;
-  max-width: 350px;
+li {
+  margin-bottom: 0.4em;
 }
 
-input[type="search"]:focus {
-  border: 1px solid #a0f;
-  width: calc(80vw - 200px);
-}
-
-footer {
-  font-size: smaller;
-}
-
-.remarkdown h1 {
-  font-weight: bold;
-  font-size: larger;
-  text-transform: capitalize;
-}
-.remarkdown h2 {
-  font-weight: bold;
-}
-.remarkdown h2::before {
-  color: #aaa;
-}
-.remarkdown p code {
-  color: #999;
-}
-.remarkdown a code {
-  color: inherit;
-}
-.remarkdown em {
+blockquote {
   font-style: italic;
-}
-.remarkdown strong {
-  font-weight: bold;
-}
-.remarkdown ul {
-    margin-left: 2ch;
-}
-.remarkdown ul > li::before {
-    margin-left: -2ch;
-}
-pre { overflow: auto; }
-
-ul.tags {
-  display: inline;
-  margin: initial;
+  margin-left: 1.5em;
+  padding-left: 1em;
+  border-left: 3px solid #ddb26f;
 }
 
-ul.tags li {
-  display: inline;
-  list-style: none;
-  background-color: #c756ff;
-  padding: 0.2em 0.3em;
+img {
+  max-width: 100%;
 }
 
-ul.tags li::before {
-  content: '';
+/* Pre and Code */
+pre {
+  background-color: #303030;
+  display: block;
+  padding: 1em;
+  overflow-x: auto;
 }
 
-ul.tags li a {
-  color: #fff;
+code {
+  font-size: 0.9em;
+  padding: 0 0.5em;
+  background-color: #303030;
+  white-space: pre-wrap;
 }
 
-ul.tags li a::after {
-  content: '';
+pre > code {
+  padding: 0;
+  background-color: transparent;
+  white-space: pre;
 }
 
-ul.tags li a::before {
-  content: '';
+/* Tables */
+table {
+  text-align: justify;
+  width: 100%;
+  border-collapse: collapse;
 }
+
+td, th {
+  padding: 0.5em;
+  border-bottom: 1px solid #303030;
+}
+
+/* Buttons, forms and input */
+input, textarea {
+  border: 1px solid #b0b0b0;
+}
+input:focus, textarea:focus {
+  border: 1px solid #ddb26f;
+}
+
+textarea {
+  width: 100%;
+}
+
+.button, button, input[type=submit], input[type=reset], input[type=button] {
+  display: inline-block;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: #ddb26f;
+  color: #151515;
+  border-radius: 1px;
+  border: 1px solid #ddb26f;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.button[disabled], button[disabled], input[type=submit][disabled], input[type=reset][disabled], input[type=button][disabled] {
+  cursor: default;
+  opacity: 0.5;
+}
+.button:focus, .button:hover, button:focus, button:hover, input[type=submit]:focus, input[type=submit]:hover, input[type=reset]:focus, input[type=reset]:hover, input[type=button]:focus, input[type=button]:hover {
+  background-color: #e1a3ee;
+  border-color: #e1a3ee;
+  color: #151515;
+  outline: 0;
+}
+
+textarea, select, input[type] {
+  color: #b0b0b0;
+  padding: 6px 10px;
+  /* The 6px vertically centers text on FF, ignored by Webkit */
+  margin-bottom: 10px;
+  background-color: #303030;
+  border: 1px solid #303030;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+textarea:focus, select:focus, input[type]:focus {
+  border: 1px solid #ddb26f;
+  outline: 0;
+}
+
+input[type=checkbox]:focus {
+  outline: 1px dotted #ddb26f;
+}
+
+label, legend, fieldset {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=sakura-tibl.css.map */
