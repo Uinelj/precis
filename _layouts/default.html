@@ -33,7 +33,7 @@
       <span><a href="./">{{ site.name }}</a></span>
       <span>
         {%for p in site.pages%}
-        {{page}}
+        {{p}}
         {%endfor%}
       </span>
       <form action="{{ site.repo_url }}/search" method="get" style="float: right">
