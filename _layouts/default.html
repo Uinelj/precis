@@ -31,6 +31,11 @@
   <div class="container">
     <header>
       <span><a href="./">{{ site.name }}</a></span>
+      <span>
+        {% for page in pages%}
+        page
+        {%endfor%}
+      </span>
       <form action="{{ site.repo_url }}/search" method="get" style="float: right">
         <input type="search" name="q" placeholder="Search">
         <input type="hidden" name="l" value="Markdown" style="display:none">
