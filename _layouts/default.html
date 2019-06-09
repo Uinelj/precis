@@ -30,12 +30,12 @@
 </head>
 <body> 
   <nav>
-      <span>
+      <p>
         <a href="./">{{site.name}}</a>
         {%for p in site.heads%}
-        <a href="./pages/{{p}}">/{{p}}</a>
+        /<a href="./pages/{{p}}">{{p}}</a>
         {%endfor%}
-      </span>
+      </p>
     </nav>
     <section>
     {% if page.date %}<span class="date">{{ page.date }}</span>{% endif %}
