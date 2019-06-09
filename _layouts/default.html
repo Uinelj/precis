@@ -32,8 +32,8 @@
     <header>
       <span><a href="./">{{ site.name }}</a></span>
       <span>
-        {% for page in pages%}
-        page
+        {%for p in site.pages%}
+        {{page}}
         {%endfor%}
       </span>
       <form action="{{ site.repo_url }}/search" method="get" style="float: right">
