@@ -27,27 +27,22 @@
     });
   </script>
 </head>
-<body class="remarkdown h1-underline h2-underline table-marker hr-hyphen">
-  <div class="container">
-    <header>
+<body> 
+  <nav>
       <span>
         <a href="./">{{site.name}}</a>
         {%for p in site.heads%}
         <a href="./pages/{{p}}">/{{p}}</a>
         {%endfor%}
       </span>
-      <!-- <form action="{{ site.repo_url }}/search" method="get" style="float: right">
-        <input type="search" name="q" placeholder="Search">
-        <input type="hidden" name="l" value="Markdown" style="display:none">
-      </form> -->
-    </header>
+    </nav>
     <section style="margin-top: 1em; color: #999;">
     {% if page.date %}<span class="date">{{ page.date }}</span>{% endif %}
     {% if page.tags %}
     {% assign tags = page.tags | split:' ' %}
     <ul class="tags">
       {% for tag in tags %}
-      <li><a href="./{{ tag }}">{{ tag }}</a></li>
+      <button href="./{{ tag }}">{{ tag }}</button>
       {% endfor %}
     </ul>
     {% endif %}
