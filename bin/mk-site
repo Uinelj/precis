@@ -12,12 +12,12 @@ echo "Adding notes list to README"
 echo "\n## Notes\n" >> README.md
 git ls-files '*.md' '*.markdown' | grep -v README | bin/mk-index >> README.md
 
-# add tags to README
-echo "Adding tags to README"
-echo "# $NAME\n" > README.md
-echo "$DESC\n" >> README.md
-echo "## Tags\n" >> README.md
-echo "$TAGS" | awk '{print "- ["$1"](./"$1")"}' >> README.md
+# # add tags to README
+# echo "Adding tags to README"
+# echo "# $NAME\n" > README.md
+# echo "$DESC\n" >> README.md
+# echo "## Tags\n" >> README.md
+# echo "$TAGS" | awk '{print "- ["$1"](./"$1")"}' >> README.md
 
 
 # generate notes list per tag
