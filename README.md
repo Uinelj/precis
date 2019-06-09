@@ -9,4 +9,5 @@ Precis is a minimal note taking web-app built over Github Pages. This website it
 
 ## Notes
 
+- *2019-05-20* [posts/post2](./posts/post2)
 - *2019-05-20* [posts/post1](./posts/post1)
